@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nataliia Bilan</title>
+    <title>Natali Bilan</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
@@ -18,7 +19,7 @@
             <img src="./img/logo.png" alt="logo" class="logo-img">
         </div>
         <div class="logo-wrap">
-            <p class="logo-name">Nataliia Bilan</p>
+            <p class="logo-name">Natali Bilan</p>
             <p class="logo-occupation">Frontend Developer</p>
         </div>    
         </div>
@@ -28,11 +29,11 @@
               <i class="fas fa-home"></i>
             </a>
 
-            <a href="/" class="skills-link">
+            <a href="#skills" class="skills-link">
                 <i class="fas fa-cog"></i>
             </a>
 
-            <a href="/" class="works-link">
+            <a href="#works" class="works-link">
                 <i class="fas fa-eye"></i>
             </a>
 
@@ -42,40 +43,19 @@
         </nav>
 
   </header>
-
-        <div class="heading">
-                            <div class="avatar">
-                                    <img class="foto" src="./img/avatar.jpg" alt="Bilan Nataliia">
-                                </div> 
-                        <div class="typing-text">
-                            <h2 class="name">Nataliia Bilan</h2>
+<section class="home container">       
+                 <div class="avatar">
+                   <img class="foto" src="./img/avatar.jpg" alt="Bilan Natali">
+                </div> 
+                <div class="home-content">
+                 <div class="typing-text">
+                            <h2 class="hello">Hello world!</h2>
                         </div>    
-                            <h3 class="occupation">Junior Front End Developer</h3>
-                            <h3 class="location">Kyiv, Ukraine</h3>
-                           
-                                               
-    </div>
-
-
-<div class="social-nav">
-    <div class="social-wrap">
-    <a class="github" href="https://github.com/NataliBILAN" target="_blank">
-    <svg width="100" height="100">
-<use href="./img/socials/github.svg">
-    
-</use>
-    </svg> 
-</a>
-    <a class="codepen" href="https://codepen.io/dashboard/" target="_blank"></a>
-        <a class="facebook" href="#" target="_blank"></a>
-        <a class="linkedin" href="www.linkedin.com/in/nataliia-bilan" target="_blank"></a>   
-    </div>
-    </div>
-
-  <!-- ABOUT ME -->
-  <section class="about-me container">
-        <h2 class="title">My purpose</h2>
-        <!-- <p class="subtitle"></p> -->
+                            <p class="occupation">I'm <span class="natali">Natali </span>- a Junior Front End Developer from Kyiv, Ukraine.
+                                With every line of code I strive to make the web a beautiful place.
+                            </p>
+                            <h2 class="title">My purpose</h2>
+        
         <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nulla, non dicta nam numquam asperiores consectetur
             cupiditate nobis dolores dolore dolor quae, aliquid ipsum reiciendis earum atque cum soluta! Cupiditate nisi
             incidunt accusantium non aspernatur provident, iste, eius magni iure, odio ullam soluta libero aliquam maxime
@@ -84,9 +64,31 @@
             vitae cum aliquid deleniti voluptas voluptatibus velit suscipit mollitia ipsum tempore animi dicta. Commodi numquam
             cum ad esse ipsam ab possimus itaque ratione iusto et!
         </p>
-       
-    </section> 
-<section class="skills container">       
+                        </div>                   
+</section>                                          
+    
+<!-- social-nav -->
+
+<div class="social-nav">
+    <div class="social-wrap">
+        <p class="follow-me">Follow me</p>
+            <a class="github" href="https://github.com/NataliBILAN" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="codepen" href="https://codepen.io/dashboard/" target="_blank">
+                <i class="fab fa-codepen"></i>
+            </a>
+    
+        <a class="facebook" href="https://www.facebook.com/natalya.alabugin " target="_blank">
+                <i class="fab fa-facebook-square"></i>
+        </a>
+        <a class="linkedin" href="https://www.linkedin.com/in/nataliia-bilan/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>   
+    </div>
+ </div>
+
+<section class="skills container" id="skills">       
     <h2 class="title">Skills</h2>
     <ul class="skill-list">
         <li>HTML & CSS</li>
@@ -104,13 +106,48 @@
     </ul>
         
 </section>
-<section class="my-works">
+<section class="my-works" id="works">
+        <h2 class="title">My works</h2>
+    <ul class="works-list">
+        <li class="item">
+            <div class="creativia">
+            <img src="./img/creativia.png" alt="creativia">
+        </div>
+        <div class="description">
+        <h3>Landing page for web-studio</h3>
+        <p>Technologies used: HTML5, CSS3, JQuery, Bootstrap 4(grid), wow.js.</p>
+        <a href="https://natalibilan.github.io/projects/creativia/index.html" target="_blank">Link</a>
+    </div>    
+    </li>
+        <li class="item"> 
+            <div class="travel">
+                <img src="./img/travel.png" alt="travel">
+            </div>
+            <div class="description">
+            <h3>Landing page for travelers</h3>
+            <p>Technologies used: HTML5, CSS3, JQuery.</p>
+           
+            <a href="https://natalibilan.github.io/goit-fe-course/practice/travel/index.html" target="_blank">Link</a>
+        </div>
+        </li>
+        <li class="item">
+                <div class="foody">
+                        <img src="./img/foody.png" alt="foody">
+                    </div>
+                    <div class="description">
+                    <h3>An application for ordering food, with authorization</h3>
+                    <p>Technologies used: React.js, Redux, styled-components, JSON-Server etc.</p>
+                   
+                    <a href="https://github.com/NataliBILAN/foodyApp/tree/master/foody" target="_blank">Link</a>
+                </div>
+        </li>
+    </ul>
         <a class="download-resume" href="" target="_blank">Download Resume</a>
 </section>
 
 <section class="contacts">
     <p>+38 097 951 72 13</p>
-    <p>natali_bila@ukr.net</p>
+    <p>natali_bilan@ukr.net</p>
 </section>
 
 <!-- MY WORKS -->

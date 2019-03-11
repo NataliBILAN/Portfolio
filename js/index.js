@@ -1,7 +1,7 @@
 'use strict';
 
 var wrapper = document.querySelector('.typing-text');
-const text = document.querySelector('.name');
+const text = document.querySelector('.hello');
 
 const textCont = text.textContent;
 console.log(textCont);
