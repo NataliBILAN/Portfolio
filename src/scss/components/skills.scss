@@ -1,0 +1,18 @@
+.skill-list {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 250px;
+}
+.skill-list li {
+	margin-bottom: 10px;
+	width: 50%;
+}
+.fa-angle-double-right {
+	color: $accent-color;
+	font-weight: 700;
+	margin-right: 10px;
+}

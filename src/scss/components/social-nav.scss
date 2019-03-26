@@ -1,0 +1,50 @@
+.social-nav {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	background-color: $main-color;
+}
+.social-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 300px;
+}
+.github,
+.codepen,
+.facebook,
+.linkedin {
+	display: block;
+	text-decoration: none;
+	font-size: 28px;
+	color: $social-color;
+}
+.github:hover .fa-github {
+	color: $accent-color;
+	transform: scale(1.2);
+}
+.codepen:hover .fa-codepen {
+	color: $accent-color;
+	transform: scale(1.2);
+}
+.facebook:hover .fa-facebook-square {
+	color: $accent-color;
+	transform: scale(1.2);
+}
+.linkedin:hover .fa-linkedin {
+	color: $accent-color;
+	transform: scale(1.2);
+}
+
+.follow-me {
+	color: $accent-color;
+	font-size: 12px;
+	text-transform: uppercase;
+}

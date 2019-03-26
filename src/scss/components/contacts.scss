@@ -1,0 +1,54 @@
+.contacts {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	box-shadow: 0px -7px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.download-resume {
+	display: inline-block;
+	font-size: 24px;
+	color: #212121;
+	text-decoration: none;
+}
+
+.download-resume::before {
+	content: url(../img/pdf.svg);
+	margin-right: 10px;
+}
+
+.purpose {
+	position: relative;
+	width: 38%;
+	text-align: left;
+	margin: 0 0 25px 0;
+
+	&::before {
+		position: absolute;
+		top: 0px;
+		left: -20px;
+		content: '';
+		display: block;
+		height: 58px;
+		width: 2px;
+		background: $accent-color;
+	}
+}
+.details {
+	width: 22%;
+}
+.phone,
+.email,
+.location {
+	display: flex;
+	margin-bottom: 10px;
+}
+.phone p,
+.email p,
+.location p {
+	margin: 0 0 0 10px;
+}
+.fa-phone,
+.fa-envelope-open,
+.fa-map-marker-alt {
+	color: $accent-color;
+}

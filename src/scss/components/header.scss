@@ -1,0 +1,110 @@
+.header {
+	display: flex;
+	padding: 40px 110px;
+	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+		0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.logo {
+	display: flex;
+	align-items: center;
+}
+.logo-name,
+.logo-occupation {
+	margin: 0;
+	text-transform: uppercase;
+}
+.logo-wrap {
+	display: flex;
+	flex-direction: column;
+}
+.logo-img-wrap {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	transition: transform .8s;
+}
+.logo-img {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	transition: transform .8s;
+}
+.logo-img:hover {
+	transform: rotate(360deg);
+}
+
+/* main-nav */
+.main-nav {
+	display: flex;
+	margin-left: auto;
+}
+.home-link,
+.skills-link,
+.works-link,
+.contacts-link {
+	position: relative;
+	font-size: 22px;
+	color: $main-color;
+	display: block;
+	line-height: 60px;
+	height: 60px;
+	text-decoration: none;
+	cursor: pointer;
+	margin-left: 100px;
+	outline: transparent;
+}
+.home-link::after,
+.skills-link::after,
+.works-link::after,
+.contacts-link::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	content: '';
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: $main-color;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transition: all .3s ease-out;
+}
+
+.fa-home,
+.fa-cog,
+.fa-eye,
+.fa-envelope {
+	transition: all .3s ease-out;
+}
+
+.home-link:hover:after {
+	content: 'home';
+	opacity: 1;
+}
+.skills-link:hover:after {
+	content: 'skills';
+	opacity: 1;
+}
+.works-link:hover:after {
+	content: 'works';
+	opacity: 1;
+}
+.contacts-link:hover:after {
+	content: 'contacts';
+	opacity: 1;
+}
+
+.home-link:hover .fa-home::before {
+	opacity: 0;
+}
+.skills-link:hover .fa-cog::before {
+	opacity: 0;
+}
+.works-link:hover .fa-eye::before {
+	opacity: 0;
+}
+.contacts-link:hover .fa-envelope::before {
+	opacity: 0;
+}
