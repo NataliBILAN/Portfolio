@@ -3,6 +3,9 @@
 	padding: 40px 110px;
 	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
 		0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+	@media screen and (max-width: 999px) {
+		padding: 10px;
+	}
 }
 .logo {
 	display: flex;
@@ -37,7 +40,11 @@
 .main-nav {
 	display: flex;
 	margin-left: auto;
+	@media screen and (max-width: 999px) {
+		display: none;
+	}
 }
+
 .home-link,
 .skills-link,
 .works-link,
@@ -107,4 +114,86 @@
 }
 .contacts-link:hover .fa-envelope::before {
 	opacity: 0;
+}
+
+// Mobile menu
+.mobile-icon {
+	display: none;
+	width: 45px;
+	height: 35px;
+	position: relative;
+	cursor: pointer;
+	@media screen and (max-width: 999px) {
+		display: inline-block;
+		margin-left: auto;
+		& span {
+			display: block;
+			position: absolute;
+			height: 9px;
+			width: 100%;
+			background: #333333;
+			border-radius: 9px;
+			opacity: 1;
+			left: 0;
+			transform: rotate(0deg);
+			transition: .25s ease-in-out;
+			&:nth-child(1) {
+				top: 0px;
+			}
+		}
+		// & span:nth-child(1) {
+		// 	top: 0px;
+		// }
+		& span:nth-child(2),
+		.mobile-icon span:nth-child(3) {
+			top: 13px;
+		}
+		& span:nth-child(4) {
+			top: 26px;
+		}
+	}
+}
+.mobile-icon-active span:nth-child(1) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+
+.mobile-icon-active span:nth-child(2) {
+	transform: rotate(45deg);
+}
+
+.mobile-icon-active span:nth-child(3) {
+	top: 12px;
+	transform: rotate(-45deg);
+}
+
+.mobile-icon-active span:nth-child(4) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+.responsive-nav {
+	display: none;
+	@media screen and (max-width: 999px) {
+		& .nav-link {
+			display: block;
+			padding: 10px 0;
+			text-align: center;
+			color: $social-color;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.menu-open {
+	position: fixed;
+	display: block;
+	top: 10%;
+	right: 0;
+	left: 0;
+	margin-top: 70px;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.8);
+	overflow: auto;
 }

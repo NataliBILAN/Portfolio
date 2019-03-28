@@ -1,7 +1,13 @@
-.my-works,
-.contacts {
+.my-works {
+	@extend %container;
 	display: flex;
 	flex-direction: column;
+	@media screen and (max-width: 999px) {
+		padding: 10px;
+	}
+}
+.works-title {
+	@extend %title;
 }
 .works-list {
 	display: flex;
@@ -10,6 +16,10 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	@media screen and (max-width: 999px) {
+		flex-flow: column wrap;
+		align-items: center;
+	}
 }
 .item {
 	display: flex;
@@ -17,6 +27,9 @@
 	justify-content: flex-start;
 	margin-bottom: 50px;
 	width: 45%;
+	@media screen and (max-width: 999px) {
+		width: 100%;
+	}
 }
 .description {
 	width: 70%;
@@ -40,6 +53,9 @@
 	cursor: pointer;
 	box-shadow: 5px 9px 27px 0px rgba(0, 0, 0, 0.5);
 	margin-bottom: 20px;
+	@media screen and (max-width: 999px) {
+		width: 280px;
+	}
 }
 .creativia img,
 .travel img,

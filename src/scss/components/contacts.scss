@@ -1,14 +1,26 @@
 .contacts {
+	@extend %container;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	box-shadow: 0px -7px 5px 0px rgba(0, 0, 0, 0.2);
+	@media screen and (max-width: 999px) {
+		padding: 10px;
+		flex-flow: column wrap;
+	}
+}
+.details-title {
+	@extend %title;
 }
 .download-resume {
 	display: inline-block;
 	font-size: 24px;
 	color: #212121;
 	text-decoration: none;
+	@media screen and (max-width: 999px) {
+		margin: 0 0 20px;
+		font-size: 20px;
+	}
 }
 
 .download-resume::before {
@@ -28,13 +40,22 @@
 		left: -20px;
 		content: '';
 		display: block;
-		height: 58px;
+		height: 100%;
 		width: 2px;
 		background: $accent-color;
+		@media screen and (max-width: 999px) {
+			left: -5px;
+		}
+	}
+	@media screen and (max-width: 999px) {
+		width: 100%;
 	}
 }
 .details {
 	width: 22%;
+	@media screen and (max-width: 999px) {
+		width: 100%;
+	}
 }
 .phone,
 .email,

@@ -45,10 +45,10 @@ function scripts() {
 	return src('src/js/*.js')
 		.pipe(plumber())
 		.pipe(babel())
-		.pipe(concat('scripts.js'))
+		.pipe(concat('index.js'))
 		.pipe(dest('build/js'))
 		.pipe(uglify())
-		.pipe(rename('scripts.min.js'))
+		.pipe(rename('index.min.js'))
 		.pipe(dest('build/js'));
 }
 
@@ -60,7 +60,7 @@ function sprite() {
 }
 
 function images() {
-	return src([ 'src/img/*.{png,jpg,jpeg,svg}', '!src/img/icons/**/*' ])
+	return src([ 'src/img/*.{png,jpg,jpeg,svg,pdf,ico}', '!src/img/icons/**/*' ])
 		.pipe(
 			imagemin([
 				imagemin.jpegtran({ progressive: true }),
@@ -78,16 +78,16 @@ function fonts() {
 }
 
 function watcher(done) {
-	watch('src/**/*.html').on('change', series(html, server.reload));
-	watch('src/sass/**/*.scss').on('change', series(styles, server.reload));
-	watch('src/js/**/*.js').on('change', series(scripts, server.reload));
+	watch('src/*.html').on('change', series(html, server.reload));
+	watch('src/scss/**/*.scss').on('change', series(styles, server.reload));
+	watch('src/js/*.js').on('change', series(scripts, server.reload));
 
 	done();
 }
 
 function serve() {
 	return server.init({
-		server: 'build',
+		server: './build',
 		notify: false,
 		open: false,
 		cors: true,

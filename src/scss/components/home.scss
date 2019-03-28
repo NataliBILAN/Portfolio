@@ -1,11 +1,21 @@
 .home {
+	@extend %container;
 	display: flex;
+	@media screen and (max-width: 999px) {
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 10px;
+	}
 }
 .avatar {
 	width: 200px;
 	height: 200px;
 	margin-right: 100px;
 	flex-shrink: 0;
+	@media screen and (max-width: 999px) {
+		margin: 0 0 55px 0;
+	}
 }
 .foto {
 	display: block;
@@ -19,9 +29,15 @@
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
+	@media screen and (max-width: 999px) {
+		width: 100%;
+	}
 }
 .typing-text {
 	margin-bottom: 30px;
+	@media screen and (max-width: 999px) {
+		text-align: center;
+	}
 }
 .typing-text > span {
 	font-family: $main-font;
@@ -30,6 +46,9 @@
 	text-transform: uppercase;
 	color: $main-color;
 	margin: 0 auto;
+	@media screen and (max-width: 999px) {
+		font-size: 50px;
+	}
 }
 .natali {
 	border-bottom: 3px solid $accent-color;
@@ -41,6 +60,9 @@
 	text-align: justify;
 	color: $main-color;
 	margin: 0;
+	@media screen and (max-width: 999px) {
+		font-size: 28px;
+	}
 }
 .heart {
 	width: 50px;

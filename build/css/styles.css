@@ -1,3 +1,21 @@
+.home,
+.skills,
+.my-works,
+.contacts {
+  margin: 0 auto;
+  padding: 50px 40px 30px 160px;
+}
+
+.skills-title,
+.works-title,
+.details-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #08fdd8;
+}
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -372,7 +390,8 @@ template {
 }
 
 body {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
+  font-size: 16px;
   border: 10px solid #212121;
 }
 
@@ -510,6 +529,53 @@ h3 {
 
 .contacts-link:hover .fa-envelope::before {
   opacity: 0;
+}
+
+.mobile-icon {
+  display: none;
+  width: 45px;
+  height: 35px;
+  position: relative;
+  cursor: pointer;
+}
+
+.mobile-icon-active span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.mobile-icon-active span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mobile-icon-active span:nth-child(3) {
+  top: 12px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.mobile-icon-active span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.responsive-nav {
+  display: none;
+}
+
+.menu-open {
+  position: fixed;
+  display: block;
+  top: 10%;
+  right: 0;
+  left: 0;
+  margin-top: 70px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
 }
 
 .home {
@@ -724,13 +790,7 @@ h3 {
   margin-right: 10px;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 50px 40px 30px 160px;
-}
-
-.my-works,
-.contacts {
+.my-works {
   display: flex;
   flex-direction: column;
 }
@@ -831,7 +891,7 @@ h3 {
   left: -20px;
   content: '';
   display: block;
-  height: 58px;
+  height: 100%;
   width: 2px;
   background: #08fdd8;
 }
@@ -884,4 +944,158 @@ h3 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50%;
+}
+
+@media screen and (max-width: 999px) {
+  .header {
+    padding: 10px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-icon {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .mobile-icon span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #333333;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  .mobile-icon span:nth-child(1) {
+    top: 0px;
+  }
+
+  .mobile-icon span:nth-child(2),
+  .mobile-icon .mobile-icon span:nth-child(3) {
+    top: 13px;
+  }
+
+  .mobile-icon span:nth-child(4) {
+    top: 26px;
+  }
+
+  .responsive-nav .nav-link {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .home {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .avatar {
+    margin: 0 0 55px 0;
+  }
+
+  .home-content {
+    width: 100%;
+  }
+
+  .typing-text {
+    text-align: center;
+  }
+
+  .typing-text > span {
+    font-size: 50px;
+  }
+
+  .introduction {
+    font-size: 28px;
+  }
+
+  .social-nav {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .social-wrap {
+    flex-direction: row;
+    height: auto;
+    padding: 10px;
+  }
+
+  .github,
+  .codepen,
+  .facebook,
+  .linkedin {
+    margin-right: 15px;
+  }
+
+  .follow-me {
+    margin-right: 15px;
+  }
+
+  .skills {
+    padding: 10px;
+  }
+
+  .skill-list {
+    height: auto;
+  }
+
+  .skill-list li {
+    width: 100%;
+  }
+
+  .my-works {
+    padding: 10px;
+  }
+
+  .works-list {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .item {
+    width: 100%;
+  }
+
+  .creativia,
+  .travel,
+  .todo,
+  .foody {
+    width: 280px;
+  }
+
+  .contacts {
+    padding: 10px;
+    flex-flow: column wrap;
+  }
+
+  .download-resume {
+    margin: 0 0 20px;
+    font-size: 20px;
+  }
+
+  .purpose::before {
+    left: -5px;
+  }
+
+  .purpose {
+    width: 100%;
+  }
+
+  .details {
+    width: 100%;
+  }
 }
