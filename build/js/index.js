@@ -3,7 +3,6 @@
 var wrapper = document.querySelector('.typing-text');
 var text = document.querySelector('.hello');
 var textCont = text.textContent;
-console.log(textCont);
 text.style.display = 'none';
 
 for (var i = 0; i < textCont.length; i++) {
@@ -20,7 +19,7 @@ for (var i = 0; i < textCont.length; i++) {
 var mobileIcon = document.querySelector('.mobile-icon');
 var menu = document.querySelector('.responsive-nav');
 var menuLinks = document.querySelectorAll('.nav-link');
-console.log(Array.from(menuLinks));
+var arrayOfLinks = Array.from(menuLinks);
 
 function handleToggleMenu(e) {
   e.preventDefault;
@@ -30,9 +29,11 @@ function handleToggleMenu(e) {
 
 function handleRemoveClass(e) {
   e.preventDefault;
-  console.log(e.target);
   menu.classList.remove('menu-open');
   mobileIcon.classList.remove('mobile-icon-active');
 }
 
-mobileIcon.addEventListener('click', handleToggleMenu); // menuLink.addEventListener('click', handleRemoveClass);
+mobileIcon.addEventListener('click', handleToggleMenu);
+arrayOfLinks.map(function (el) {
+  return el.addEventListener('click', handleRemoveClass);
+});

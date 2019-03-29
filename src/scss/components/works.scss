@@ -23,8 +23,8 @@
 }
 .item {
 	display: flex;
-	flex-flow: column wrap;
-	justify-content: flex-start;
+	flex-flow: row wrap;
+	justify-content: center;
 	margin-bottom: 50px;
 	width: 45%;
 	@media screen and (max-width: 999px) {
@@ -33,14 +33,33 @@
 }
 .description {
 	width: 70%;
+	text-align: center;
+	// margin: 0 auto;
+	& .fa-code {
+		margin-right: 10px;
+		&:hover {
+			color: $accent-color;
+		}
+	}
+	& h3,
+	& p {
+		margin-bottom: 20px;
+		text-align: center;
+	}
 }
-.description h3,
-.description p {
-	margin-bottom: 20px;
-}
+// .description h3,
+// .description p {
+// 	margin-bottom: 20px;
+// 	text-align: center;
+// }
 .link {
 	text-decoration: none;
 	font-weight: 700;
+	display: inline-block;
+	text-align: center;
+	&:hover {
+		color: $accent-color;
+	}
 }
 .creativia,
 .travel,
@@ -55,20 +74,27 @@
 	margin-bottom: 20px;
 	@media screen and (max-width: 999px) {
 		width: 280px;
+		margin: 0 auto 20px;
+		height: 290px;
 	}
 }
-.creativia img,
-.travel img,
-.todo img,
-.foody img {
+
+.creativia-img,
+.travel-img,
+.todo-img,
+.foody-img {
 	display: block;
 	width: 100%;
 	height: auto;
 	transition: all 8s ease-in-out;
 }
-.creativia:hover img {
-	transform: translateY(-76%);
+.creativia:hover {
+	& img {
+		transform: translateY(-76%);
+	}
 }
-.travel:hover img {
-	transform: translateY(-51%);
+.travel:hover {
+	& img {
+		transform: translateY(-51%);
+	}
 }

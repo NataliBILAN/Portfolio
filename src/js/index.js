@@ -4,7 +4,6 @@ const wrapper = document.querySelector('.typing-text');
 const text = document.querySelector('.hello');
 
 const textCont = text.textContent;
-console.log(textCont);
 text.style.display = 'none';
 
 for (let i = 0; i < textCont.length; i++) {
@@ -21,7 +20,7 @@ for (let i = 0; i < textCont.length; i++) {
 const mobileIcon = document.querySelector('.mobile-icon');
 const menu = document.querySelector('.responsive-nav');
 const menuLinks = document.querySelectorAll('.nav-link');
-console.log(Array.from(menuLinks));
+const arrayOfLinks = Array.from(menuLinks);
 function handleToggleMenu(e) {
 	e.preventDefault;
 	menu.classList.toggle('menu-open');
@@ -29,9 +28,8 @@ function handleToggleMenu(e) {
 }
 function handleRemoveClass(e) {
 	e.preventDefault;
-	console.log(e.target);
 	menu.classList.remove('menu-open');
 	mobileIcon.classList.remove('mobile-icon-active');
 }
 mobileIcon.addEventListener('click', handleToggleMenu);
-// menuLink.addEventListener('click', handleRemoveClass);
+arrayOfLinks.map((el) => el.addEventListener('click', handleRemoveClass));

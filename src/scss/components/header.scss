@@ -15,6 +15,9 @@
 .logo-occupation {
 	margin: 0;
 	text-transform: uppercase;
+	@media screen and (max-width: 999px) {
+		font-size: 14px;
+	}
 }
 .logo-wrap {
 	display: flex;
@@ -116,7 +119,7 @@
 	opacity: 0;
 }
 
-// Mobile menu
+// Mobile nav
 .mobile-icon {
 	display: none;
 	width: 45px;
@@ -140,48 +143,52 @@
 			&:nth-child(1) {
 				top: 0px;
 			}
-		}
-		// & span:nth-child(1) {
-		// 	top: 0px;
-		// }
-		& span:nth-child(2),
-		.mobile-icon span:nth-child(3) {
-			top: 13px;
-		}
-		& span:nth-child(4) {
-			top: 26px;
+			&:nth-child(2),
+			&:nth-child(3) {
+				top: 13px;
+			}
+			&:nth-child(4) {
+				top: 26px;
+			}
 		}
 	}
-}
-.mobile-icon-active span:nth-child(1) {
-	top: 18px;
-	width: 0%;
-	left: 50%;
-}
-
-.mobile-icon-active span:nth-child(2) {
-	transform: rotate(45deg);
-}
-
-.mobile-icon-active span:nth-child(3) {
-	top: 12px;
-	transform: rotate(-45deg);
-}
-
-.mobile-icon-active span:nth-child(4) {
-	top: 18px;
-	width: 0%;
-	left: 50%;
 }
 .responsive-nav {
 	display: none;
 	@media screen and (max-width: 999px) {
+		padding: 50px 0;
+
 		& .nav-link {
 			display: block;
+			text-decoration: none;
 			padding: 10px 0;
 			text-align: center;
 			color: $social-color;
 			text-transform: uppercase;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+}
+.mobile-icon-active {
+	& span {
+		&:nth-child(1) {
+			top: 18px;
+			width: 0%;
+			left: 50%;
+		}
+		&:nth-child(2) {
+			transform: rotate(45deg);
+		}
+		&:nth-child(3) {
+			top: 12px;
+			transform: rotate(-45deg);
+		}
+		&:nth-child(4) {
+			top: 18px;
+			width: 0%;
+			left: 50%;
 		}
 	}
 }
@@ -189,7 +196,7 @@
 .menu-open {
 	position: fixed;
 	display: block;
-	top: 10%;
+	top: 0;
 	right: 0;
 	left: 0;
 	margin-top: 70px;

@@ -539,6 +539,10 @@ h3 {
   cursor: pointer;
 }
 
+.responsive-nav {
+  display: none;
+}
+
 .mobile-icon-active span:nth-child(1) {
   top: 18px;
   width: 0%;
@@ -562,14 +566,10 @@ h3 {
   left: 50%;
 }
 
-.responsive-nav {
-  display: none;
-}
-
 .menu-open {
   position: fixed;
   display: block;
-  top: 10%;
+  top: 0;
   right: 0;
   left: 0;
   margin-top: 70px;
@@ -608,7 +608,7 @@ h3 {
   margin-bottom: 30px;
 }
 
-.typing-text > span {
+.typing-text span {
   font-family: "Orbitron", sans-serif;
   font-size: 70px;
   font-weight: 700;
@@ -782,6 +782,7 @@ h3 {
 .skill-list li {
   margin-bottom: 10px;
   width: 50%;
+  font-size: 18px;
 }
 
 .fa-angle-double-right {
@@ -806,24 +807,40 @@ h3 {
 
 .item {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: center;
   margin-bottom: 50px;
   width: 45%;
 }
 
 .description {
   width: 70%;
+  text-align: center;
+}
+
+.description .fa-code {
+  margin-right: 10px;
+}
+
+.description .fa-code:hover {
+  color: #08fdd8;
 }
 
 .description h3,
 .description p {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .link {
   text-decoration: none;
   font-weight: 700;
+  display: inline-block;
+  text-align: center;
+}
+
+.link:hover {
+  color: #08fdd8;
 }
 
 .creativia,
@@ -839,10 +856,10 @@ h3 {
   margin-bottom: 20px;
 }
 
-.creativia img,
-.travel img,
-.todo img,
-.foody img {
+.creativia-img,
+.travel-img,
+.todo-img,
+.foody-img {
   display: block;
   width: 100%;
   height: auto;
@@ -951,6 +968,11 @@ h3 {
     padding: 10px;
   }
 
+  .logo-name,
+  .logo-occupation {
+    font-size: 14px;
+  }
+
   .main-nav {
     display: none;
   }
@@ -979,7 +1001,7 @@ h3 {
   }
 
   .mobile-icon span:nth-child(2),
-  .mobile-icon .mobile-icon span:nth-child(3) {
+  .mobile-icon span:nth-child(3) {
     top: 13px;
   }
 
@@ -987,12 +1009,21 @@ h3 {
     top: 26px;
   }
 
+  .responsive-nav {
+    padding: 50px 0;
+  }
+
   .responsive-nav .nav-link {
     display: block;
+    text-decoration: none;
     padding: 10px 0;
     text-align: center;
     color: #ffffff;
     text-transform: uppercase;
+  }
+
+  .responsive-nav .nav-link:hover {
+    opacity: 0.5;
   }
 
   .home {
@@ -1014,7 +1045,7 @@ h3 {
     text-align: center;
   }
 
-  .typing-text > span {
+  .typing-text span {
     font-size: 50px;
   }
 
@@ -1055,6 +1086,7 @@ h3 {
 
   .skill-list li {
     width: 100%;
+    font-size: 16px;
   }
 
   .my-works {
@@ -1075,6 +1107,8 @@ h3 {
   .todo,
   .foody {
     width: 280px;
+    margin: 0 auto 20px;
+    height: 290px;
   }
 
   .contacts {

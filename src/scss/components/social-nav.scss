@@ -40,21 +40,29 @@
 		margin-right: 15px;
 	}
 }
-.github:hover .fa-github {
-	color: $accent-color;
-	transform: scale(1.2);
+.github:hover {
+	& .fa-github {
+		color: $accent-color;
+		transform: scale(1.2);
+	}
 }
-.codepen:hover .fa-codepen {
-	color: $accent-color;
-	transform: scale(1.2);
+.codepen:hover {
+	& .fa-codepen {
+		color: $accent-color;
+		transform: scale(1.2);
+	}
 }
-.facebook:hover .fa-facebook-square {
-	color: $accent-color;
-	transform: scale(1.2);
+.facebook:hover {
+	& .fa-facebook-square {
+		color: $accent-color;
+		transform: scale(1.2);
+	}
 }
-.linkedin:hover .fa-linkedin {
-	color: $accent-color;
-	transform: scale(1.2);
+.linkedin:hover {
+	& .fa-linkedin {
+		color: $accent-color;
+		transform: scale(1.2);
+	}
 }
 
 .follow-me {
