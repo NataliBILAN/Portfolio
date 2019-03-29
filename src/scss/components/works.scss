@@ -20,6 +20,9 @@
 		flex-flow: column wrap;
 		align-items: center;
 	}
+	@media (min-width: 1000px) and (max-width: 1200px) {
+		justify-content: space-between;
+	}
 }
 .item {
 	display: flex;

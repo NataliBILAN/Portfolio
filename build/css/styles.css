@@ -883,11 +883,19 @@ h3 {
   box-shadow: 0px -7px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
+.details-title {
+  margin-bottom: 20px;
+}
+
 .download-resume {
   display: inline-block;
   font-size: 24px;
   color: #212121;
   text-decoration: none;
+}
+
+.download-resume:hover {
+  font-size: 26px;
 }
 
 .download-resume::before {
@@ -1131,5 +1139,11 @@ h3 {
 
   .details {
     width: 100%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .works-list {
+    justify-content: space-between;
   }
 }
