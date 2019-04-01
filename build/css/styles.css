@@ -892,6 +892,7 @@ h3 {
   font-size: 24px;
   color: #212121;
   text-decoration: none;
+  transition: all .3s ease-in-out;
 }
 
 .download-resume:hover {
