@@ -420,6 +420,7 @@ h3 {
 .logo-occupation {
   margin: 0;
   text-transform: uppercase;
+  font-size: 16px;
 }
 
 .logo-wrap {
@@ -1001,7 +1002,7 @@ h3 {
 
   .logo-name,
   .logo-occupation {
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .main-nav {
