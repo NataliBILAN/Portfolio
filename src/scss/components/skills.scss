@@ -18,7 +18,7 @@
 }
 .skill-list li {
 	margin-bottom: 10px;
-	width: 50%;
+	width: calc(100%/3);
 	font-size: 18px;
 	@media screen and (max-width: 999px) {
 		width: 100%;

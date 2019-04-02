@@ -1,5 +1,6 @@
 'use strict';
 
+// Typing text
 const wrapper = document.querySelector('.typing-text');
 const text = document.querySelector('.hello');
 
@@ -17,6 +18,7 @@ for (let i = 0; i < textCont.length; i++) {
 	})(i);
 }
 
+// Responsive menu
 const mobileIcon = document.querySelector('.mobile-icon');
 const menu = document.querySelector('.responsive-nav');
 const menuLinks = document.querySelectorAll('.nav-link');

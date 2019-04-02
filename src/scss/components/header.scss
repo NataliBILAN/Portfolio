@@ -3,6 +3,7 @@
 	padding: 40px 110px;
 	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
 		0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+	// background-color: $social-color;
 	@media screen and (max-width: 999px) {
 		padding: 10px;
 	}
@@ -27,7 +28,6 @@
 	width: 50px;
 	height: 50px;
 	margin-right: 10px;
-	transition: transform .8s;
 }
 .logo-img {
 	display: block;
@@ -37,6 +37,7 @@
 }
 .logo-img:hover {
 	transform: rotate(360deg);
+	transition: transform .8s;
 }
 
 /* main-nav */
@@ -79,44 +80,52 @@
 	width: 100%;
 	text-align: center;
 	opacity: 0;
-	transition: all .3s ease-out;
+	transition: all .5s ease;
 }
 
 .fa-home,
 .fa-cog,
 .fa-eye,
 .fa-envelope {
-	transition: all .3s ease-out;
+	transition: all .5s ease;
 }
 
 .home-link:hover:after {
 	content: 'home';
 	opacity: 1;
+	transition: all .5s ease;
 }
 .skills-link:hover:after {
 	content: 'skills';
 	opacity: 1;
+	transition: all .5s ease;
 }
 .works-link:hover:after {
 	content: 'works';
 	opacity: 1;
+	transition: all .5s ease;
 }
 .contacts-link:hover:after {
 	content: 'contacts';
 	opacity: 1;
+	transition: all .5s ease;
 }
 
 .home-link:hover .fa-home::before {
 	opacity: 0;
+	transition: all .5s ease;
 }
 .skills-link:hover .fa-cog::before {
 	opacity: 0;
+	transition: all .5s ease;
 }
 .works-link:hover .fa-eye::before {
 	opacity: 0;
+	transition: all .5s ease;
 }
 .contacts-link:hover .fa-envelope::before {
 	opacity: 0;
+	transition: all .5s ease;
 }
 
 // Mobile nav
@@ -203,4 +212,11 @@
 	z-index: 1000;
 	background-color: rgba(0, 0, 0, 0.8);
 	overflow: auto;
+}
+
+// Sticky header
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
 }

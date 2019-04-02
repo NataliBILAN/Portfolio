@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // Typing text
 
 var wrapper = document.querySelector('.typing-text');
 var text = document.querySelector('.hello');
@@ -14,7 +14,8 @@ for (var i = 0; i < textCont.length; i++) {
       wrapper.appendChild(span);
     }, 100 * i);
   })(i);
-}
+} // Responsive menu
+
 
 var mobileIcon = document.querySelector('.mobile-icon');
 var menu = document.querySelector('.responsive-nav');

@@ -389,6 +389,10 @@ template {
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Orbitron", sans-serif;
   font-size: 16px;
@@ -427,9 +431,6 @@ h3 {
   width: 50px;
   height: 50px;
   margin-right: 10px;
-  transition: -webkit-transform .8s;
-  transition: transform .8s;
-  transition: transform .8s, -webkit-transform .8s;
 }
 
 .logo-img {
@@ -444,6 +445,9 @@ h3 {
 .logo-img:hover {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
+  transition: -webkit-transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s;
 }
 
 /* main-nav */
@@ -485,50 +489,58 @@ h3 {
   width: 100%;
   text-align: center;
   opacity: 0;
-  transition: all .3s ease-out;
+  transition: all .5s ease;
 }
 
 .fa-home,
 .fa-cog,
 .fa-eye,
 .fa-envelope {
-  transition: all .3s ease-out;
+  transition: all .5s ease;
 }
 
 .home-link:hover:after {
   content: 'home';
   opacity: 1;
+  transition: all .5s ease;
 }
 
 .skills-link:hover:after {
   content: 'skills';
   opacity: 1;
+  transition: all .5s ease;
 }
 
 .works-link:hover:after {
   content: 'works';
   opacity: 1;
+  transition: all .5s ease;
 }
 
 .contacts-link:hover:after {
   content: 'contacts';
   opacity: 1;
+  transition: all .5s ease;
 }
 
 .home-link:hover .fa-home::before {
   opacity: 0;
+  transition: all .5s ease;
 }
 
 .skills-link:hover .fa-cog::before {
   opacity: 0;
+  transition: all .5s ease;
 }
 
 .works-link:hover .fa-eye::before {
   opacity: 0;
+  transition: all .5s ease;
 }
 
 .contacts-link:hover .fa-envelope::before {
   opacity: 0;
+  transition: all .5s ease;
 }
 
 .mobile-icon {
@@ -576,6 +588,12 @@ h3 {
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: auto;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .home {
@@ -737,12 +755,14 @@ h3 {
   text-decoration: none;
   font-size: 28px;
   color: #ffffff;
+  transition: all 250ms ease;
 }
 
 .github:hover .fa-github {
   color: #08fdd8;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+  transition: all 250ms ease;
 }
 
 .codepen:hover .fa-codepen {
@@ -755,12 +775,14 @@ h3 {
   color: #08fdd8;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+  transition: all 250ms ease;
 }
 
 .linkedin:hover .fa-linkedin {
   color: #08fdd8;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+  transition: all 250ms ease;
 }
 
 .follow-me {
@@ -781,7 +803,7 @@ h3 {
 
 .skill-list li {
   margin-bottom: 10px;
-  width: 50%;
+  width: calc(100%/3);
   font-size: 18px;
 }
 
